@@ -1,4 +1,4 @@
-# SweetMatch 🍰
+# SweetMatch 
 
 ## Sistema inteligente de recomendación de pasteles y bebidas mediante Machine Learning y AWS
 
