@@ -35,7 +35,4 @@ El conjunto de datos inicial contiene tres columnas:
 - `cake`: tipo de pastel comprado.
 - `beverage`: bebida comprada.
 
-
-
-
 Proyecto académico individual.
