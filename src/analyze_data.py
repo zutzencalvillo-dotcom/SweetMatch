@@ -1,22 +1,22 @@
 
 import pandas as pd
 
-# Load the purchase dataset
+# datos de compra
 data = pd.read_csv("data/purchases.csv")
 
-# Show the first rows
+
 print("PURCHASE DATASET")
 print(data.head())
 
-# Count the most popular cakes
+# contar los pasteles mas populares
 print("\nMOST POPULAR CAKES")
 print(data["cake"].value_counts())
 
-# Count the most popular beverages
+# bebidas mas populares 
 print("\nMOST POPULAR BEVERAGES")
 print(data["beverage"].value_counts())
 
-# Find the most common combinations
+# Combinaciones mas comunes
 print("\nMOST COMMON COMBINATIONS")
 print(
     data.groupby(["cake", "beverage"])
