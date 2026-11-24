@@ -90,8 +90,8 @@ print("Input columns:", X.columns.tolist())
 
 
 
-from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
+from sklearn.tree import DecisionTreeClassifier
 
 # Crear el modelo
 model_tree = DecisionTreeClassifier(random_state=42)
@@ -149,6 +149,7 @@ for real, predicted in zip(y_test, predictions_forest):
 
 
 import os
+
 import joblib
 
 # Crear carpeta para guardar modelos

@@ -1,8 +1,10 @@
 ﻿
-import pandas as pd
-import joblib
 import os
+
+import joblib
+import pandas as pd
 from streamlit.testing.v1 import AppTest
+
 
 # Prueba 1: Verificar el dataset
 def test_dataset():

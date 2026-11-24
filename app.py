@@ -1,10 +1,11 @@
 
-import streamlit as st
-import pandas as pd
-import joblib
-import os
 import logging
+import os
 import time
+
+import joblib
+import pandas as pd
+import streamlit as st
 
 # Configuracion del monitoreo
 logging.basicConfig(

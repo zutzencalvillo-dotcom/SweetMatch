@@ -34,6 +34,7 @@ pytz==2026.6
 referencing==0.37.0
 requests==2.34.2
 rpds-py==0.30.0
+ruff==0.17.6
 scikit-learn==1.7.2
 scipy==1.15.3
 six==1.17.0
