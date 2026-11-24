@@ -3,6 +3,16 @@ import streamlit as st
 import pandas as pd
 import joblib
 import os
+import logging
+import time
+
+# Configuracion del monitoreo
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s"
+)
+
+logger = logging.getLogger("SweetMatch")
 
 # Configuracion de la pagina
 st.set_page_config(
@@ -195,6 +205,8 @@ cake = cakes[selected_cake]
 # Sistema de recomendacion
 if st.button("💗 Find my perfect match"):
 
+    start_time = time.perf_counter()
+
     beverage = recommend_association(cake)
 
     if beverage is not None:
@@ -213,6 +225,17 @@ if st.button("💗 Find my perfect match"):
     else:
         beverage = (data[beverages] > 0).sum().idxmax()
         method = "Popularity"
+
+        # Monitoreo de la prediccion
+    response_time = (time.perf_counter() - start_time) * 1000
+
+    logger.info(
+        f"PREDICTION | "
+        f"Cake: {selected_cake} | "
+        f"Beverage: {drink_names[beverage]} | "
+        f"Method: {method} | "
+        f"Response time: {response_time:.2f} ms"
+    )
 
     # Mostrar resultado
     st.balloons()
